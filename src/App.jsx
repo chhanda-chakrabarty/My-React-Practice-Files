@@ -1,5 +1,6 @@
-import MappingDataToComponents from "./components/MappingDataToComponents";
-import Data from "./MappingData.json";
+// Practice-5 using map() array method type-3 to generate unique id from npm package UUID */}
+import NestedMapping from "./components/Mapping Data/NestedMapping";
+import Unique from "./components/Mapping Data/Unique";
 
 const App = () => {
   // Value loading and accessing by indexing
@@ -56,43 +57,23 @@ const App = () => {
 
   return (
     <div className="w-[350px] grid grid-rows-6 gap-1 place-content-center">
-      <h1 className="bg-red-600 text-2xl text-white">
+      {/* <h1 className="bg-red-600 text-2xl text-white">
         Mapping Data to components
-      </h1>
+      </h1> */}
+      <h1>{<Unique />}</h1>
+      <p>{<NestedMapping />}</p>
 
       {/* Practice-4 using map() array method type-2 */}
 
-      {Data.map((item, index) => (
+      {/* {Data.map((item, index) => (
         <MappingDataToComponents
           key={index}
           titleName={item.name}
           aboutAge={item.age}
         />
-      ))}
-      {/* {
-        <MappingDataToComponents
-          titleName={Data[0].name}
-          aboutAge={Data[0].age}
-        />
-      }
-      {
-        <MappingDataToComponents
-          titleName={Data[1].name}
-          aboutAge={Data[1].age}
-        />
-      }
-      {
-        <MappingDataToComponents
-          titleName={Data[2].name}
-          aboutAge={Data[2].age}
-        />
-      }
-      {
-        <MappingDataToComponents
-          titleName={Data[3].name}
-          aboutAge={Data[3].age}
-        />
-      } */}
+      ))} */}
+
+      {/* Practice-5 using map() array method type-3 to generate unique id from npm package UUID */}
     </div>
   );
 };
