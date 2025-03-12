@@ -1,25 +1,25 @@
-const products = [
-  { id: 1, name: "Laptop", price: 800 },
-  { id: 2, name: "Phone", price: 500 },
-];
-
-function Product({ name, price }) {
+const ProductList = () => {
+  const cityNames = [
+    {
+      name: "Dhaka",
+      population: 14900000,
+      area: 12.5,
+      country: "Bangladesh",
+    },
+  ];
   return (
-    <div>
-      <h1>{name}</h1>
-      <h5>Price: ${price}</h5>
+    <div className="bg-amber-600 text-black text-2xl text-center py-2 ">
+      {/* {[name, population, area, country]} */}
+      <ul>
+        {cityNames.map((city, index) => (
+          <li key={index}>
+            `City: {city.name} <br /> Population: {city.population} <br />
+            Area: {city.area} <br /> Country: {city.country}`
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
-
-function ProductList() {
-  return (
-    <div className="bg bg-red-300 text-center text-2xl py-2 text-bold">
-      {products.map((item) => (
-        <Product key={item.id} name={item.name} price={item.price} />
-      ))}
-    </div>
-  );
-}
+};
 
 export default ProductList;
